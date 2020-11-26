@@ -36,6 +36,7 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!-- 增加 UnitTest 支持 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -46,6 +47,12 @@
           <artifactId>junit-vintage-engine</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+
+    <!-- 增加运维支持 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
   </dependencies>
 
