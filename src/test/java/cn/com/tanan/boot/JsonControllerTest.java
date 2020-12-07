@@ -1,0 +1,30 @@
+/*
+ * 需要放在 src/test 目录下
+ */
+package cn.com.tanan.boot;
+
+import cn.com.tanan.boot.controller.JsonController;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@WebMvcTest(JsonController.class) /* 单测 Controller */
+public class JsonControllerTest {
+
+    @Autowired
+    private MockMvc mvc;    /* 模拟 HTTP requests，通过 SpringBootTest、AutoConfigureMockMvc 注入 MockMvc 实例 */
+
+    @Test
+    public void testJsonHelloText() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/json/hello").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
+    }
+}

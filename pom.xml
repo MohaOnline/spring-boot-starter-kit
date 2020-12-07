@@ -49,7 +49,11 @@
       </exclusions>
     </dependency>
 
-    <!-- 增加运维支持 -->
+    <!--
+      增加运维支持
+        激活后可用以下命令确认服务状态：
+          curl localhost:8080/actuator/health
+    -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>

@@ -11,7 +11,7 @@ import java.util.Arrays;
 /* SpringBootApplication 在自定义包里使用
  * 标识后自动扫描同包下的 Controller
  */
-@SpringBootApplication
+@SpringBootApplication /* 隐式打开 @EnableWebMvc，激活 http / https 通信 URL */
 public class WebApplication {
   
   public static void main(String[] args) {
