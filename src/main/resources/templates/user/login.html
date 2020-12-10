@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Insert title here</title>
+</head>
+<body>
+<p th:text="'Hello ' + ${name} + ', we have ' + ${greeting.id} + ' customers after site is alive.'"></p>
+<form method="POST" th:action="@{/view/user/login}" th:object="${greeting}">
+  <label>message</label>
+  <!-- 自动组成 Greeting 对象 -->
+  <input type="hidden" th:field="*{id}" />
+  <input type="text" th:field="*{content}" />
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>

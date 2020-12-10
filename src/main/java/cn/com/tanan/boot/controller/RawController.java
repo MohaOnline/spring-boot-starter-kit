@@ -13,10 +13,12 @@ import java.util.concurrent.atomic.AtomicLong;
 @Controller
 public class RawController {
 
+  /* 标记可访问 URI */
   @RequestMapping("/raw/hello")
   public @ResponseBody String hello() {
     return "Hello, World";
   }
+
 
   /** Greeting from service. */
   private final GreetingService service;
@@ -29,13 +31,15 @@ public class RawController {
     return service.greet();
   }
 
+
   /** Greeting from object. */
   private static final String template = "Hello, %s!";
-  private final AtomicLong counter = new AtomicLong();
+  private static final AtomicLong counter = new AtomicLong();
 
   @GetMapping("/raw/hello-json")
   @ResponseBody /* 标记函数返回为应答内容，直接在 responseBody 里返回的对象会被转为 JSON */
   public Greeting helloJson(@RequestParam(name = "name", required = false, defaultValue = "Stranger") String name) {
     return new Greeting(counter.incrementAndGet(), String.format(template, name));
   }
+
 }

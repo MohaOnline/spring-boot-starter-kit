@@ -1,24 +1,27 @@
 # Spring Boot Starter Kit Guide
 使开发 Spring Boot 应用更容易。
 
+## 运维命令
+
 ``` bash
 # 编译项目
 mvn compile
 
-# 打包项目
-mvn package
-./mvnw clean package
-./gradlew build
-
 # 确认项目依赖
 mvn dependency:tree
 ./gradlew dependencies
+
+# 打包项目
+mvn package
+./mvnw clean package
+./gradlew bootJar # 在 build/libs/ 下生成 jar 包
 
 # 运行项目
 mvn spring-boot:run
 mvn clean spring-boot:run    # 确保最新代码启用
 
 ./mvnw spring-boot:run
+./gradlew bootRun
 
 # 运行测试
 mvn test

@@ -19,8 +19,7 @@ public class WebApplication {
     SpringApplication.run(WebApplication.class, args);
   }
 
-  /* Bean 标识 CommandLineRunner 启动时运行
-   */
+  /* Bean annotation 标识 CommandLineRunner 启动时运行 */
   @Bean
   public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
     return args -> {

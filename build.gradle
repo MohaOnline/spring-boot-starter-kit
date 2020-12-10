@@ -1,10 +1,10 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.2.RELEASE'
+    id 'org.springframework.boot' version '2.4.2'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
 }
 
-group = 'com.example'
+group = 'cn.com.tanan.boot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -13,8 +13,10 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
@@ -22,4 +24,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+// To create a ‘fully executable’ jar
+bootJar {
+    launchScript()
 }
