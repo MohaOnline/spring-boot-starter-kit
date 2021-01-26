@@ -18,6 +18,7 @@ class ThisWillActuallyRun {
 
     @RequestMapping("/")
     String home() {
+        // 在 Response 中返回这段文字
         "Greetings from Groovy!"
     }
 
