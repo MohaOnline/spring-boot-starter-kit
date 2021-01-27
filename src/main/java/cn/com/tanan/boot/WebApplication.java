@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import java.util.Arrays;
 
 /* SpringBootApplication 在自定义包里使用
- * 标识后自动扫描同包下的 Controller
+ * 标识后自动扫描同包下的 Controller、Entity
  */
 @SpringBootApplication /* 隐式打开 @EnableWebMvc，激活 http / https 通信 URL */
 public class WebApplication {

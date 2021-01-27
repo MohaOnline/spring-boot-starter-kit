@@ -10,9 +10,10 @@
 
   <parent>
     <!-- 帮助管理依赖库版本 -->
+    <!-- 最新版本 https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/ -->
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.3.6.RELEASE</version>
+    <version>2.4.2</version>
   </parent>
 
   <description/>
@@ -20,9 +21,11 @@
   <developers>
     <developer/>
   </developers>
+
   <licenses>
     <license/>
   </licenses>
+
   <scm>
     <url/>
   </scm>
@@ -37,7 +40,8 @@
   <!-- Additional lines to be added here... -->
   
   <dependencies>
-    <!-- 增加 Web 开发支持 -->
+    <!-- 缺的库在执行 mvn compile 后会下载到 ~/.m2/repository -->
+    <!-- 增加 Web(MVC) 开发支持 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -46,6 +50,25 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
+    <!-- 增加数据库支持 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.16</version>
+      <scope>provided</scope>
     </dependency>
 
     <!--
