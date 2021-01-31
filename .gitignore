@@ -35,3 +35,5 @@ build/
 
 ### Gradle ###
 .gradle/
+
+src/main/resources/application-dev.properties
