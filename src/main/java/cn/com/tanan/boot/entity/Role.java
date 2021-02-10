@@ -27,5 +27,12 @@ public class Role {
   @Column(length = 1024)
   @Getter @Setter private String description;
 
+  public Role(){}
+
+  public Role (String name, String description) {
+    this.name = name;
+    this.description = description;
+    this.status = Constants.STATUS_ACTIVE;
+  }
 
 }

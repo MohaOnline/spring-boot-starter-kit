@@ -1,0 +1,22 @@
+POST http://localhost:8088/graphql
+Content-Type: application/json
+{query: "{getRoles{id name}}", variables: null, operationName: null}
+
+
+
+
+###
+# returns hello world
+GET http://localhost:8088/json/greetings
+Accept: application/json
+
+###
+
+# Test 有效角色
+GET http://localhost:8088/rest/admin/role/id/1
+Accept: application/json
+
+###
+
+
+

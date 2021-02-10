@@ -1,0 +1,25 @@
+{
+  getRoles{
+    id
+    name
+  }
+}
+
+###
+
+{
+  countRoles
+}
+
+###
+
+# 新建一个角色
+mutation{
+  newRole(
+    name: "Vender",
+    description: ""
+  ) {
+    id
+    name
+  }
+}

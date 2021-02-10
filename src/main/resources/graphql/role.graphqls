@@ -1,0 +1,15 @@
+type Role {
+    id: ID!
+    name: String!
+    description: String
+}
+
+type Query {
+    getRoles: [Role]!
+    countRoles: Int
+}
+
+type Mutation {
+    #
+    newRole(name: String!, description: String!) : Role!
+}

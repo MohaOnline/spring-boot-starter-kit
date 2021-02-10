@@ -34,8 +34,8 @@ public class IntegrationTest {
   }
 
   @Test
-  public void testJsonHelloText() throws Exception {
-      ResponseEntity<String> response = template.getForEntity(base.toString() + "json/hello",
+  public void testGreetingsText() throws Exception {
+      ResponseEntity<String> response = template.getForEntity(base.toString() + "json/greetings",
               String.class);
       assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
   }

@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Handles http requests per URI.
  */
-@RestController
+@RequestMapping("/json")
+@RestController /* @see @RestController = @Controller + @ResponseBody */
 public class JsonController {
 
-  @RequestMapping("/json/hello")
-  String testJsonHelloText() {
+  @RequestMapping("/greetings")
+  String jsonGreetingsText() {
     return "Greetings from Spring Boot!";
   }
 }

@@ -10,6 +10,7 @@ mvn compile
 # 确认项目依赖
 mvn dependency:tree
 ./gradlew dependencies
+mvn dependency:sources dependency:resolve -Dclassifier=javadoc # 下载依赖库源码
 
 # 打包项目
 mvn package
