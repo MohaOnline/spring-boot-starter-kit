@@ -1,9 +1,9 @@
 # Spring Boot Starter Kit Guide
 使开发 Spring Boot 应用更容易。
 
-## 运维命令
+## 相关命令
 
-``` bash
+```shell script
 # 编译项目
 mvn compile
 
@@ -28,8 +28,10 @@ mvn clean spring-boot:run    # 确保最新代码启用
 mvn test
 ./mvnw test
 ./gradlew test
+```
 
-
+### jar 包相关
+```shell script
 # 分析 jar 内容
 jar tvf target/spring-boot-starter-kit-0.0.1-SNAPSHOT.jar
 
@@ -37,4 +39,12 @@ jar tvf target/spring-boot-starter-kit-0.0.1-SNAPSHOT.jar
 java -jar target/spring-boot-starter-kit-0.0.1-SNAPSHOT.jar
 # 访问 http://localhost:8080/hello 观察内容
 ```
+
+### Docker 相关
+```shell script
+mvn spring-boot:build-image
+./gradlew bootBuildImage
+```
+
+
 

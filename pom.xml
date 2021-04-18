@@ -152,6 +152,14 @@
           <executable>true</executable>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>azure-webapp-maven-plugin</artifactId>
+        <version>1.13.0</version>
+
+
+      </plugin>
     </plugins>
   </build>
 

@@ -1,0 +1,14 @@
+# 优先级最低
+server:
+  port: 8888
+
+--- # 分割两个 yaml 配置
+
+spring:
+  config:
+    activate:
+      on-profile: yaml
+
+server:
+  port: 8022
+  
