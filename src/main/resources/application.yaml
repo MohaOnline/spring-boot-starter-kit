@@ -11,4 +11,10 @@ spring:
 
 server:
   port: 8022
-  
+
+
+---
+# test profile
+spring:
+  profiles: test
+
