@@ -21,7 +21,7 @@ public class WebApplication {
 
   /* Bean 标识 CommandLineRunner 启动时运行
    */
-  @Bean
+  // @Bean
   public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
     return args -> {
 

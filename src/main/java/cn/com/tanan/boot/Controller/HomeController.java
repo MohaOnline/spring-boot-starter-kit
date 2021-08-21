@@ -1,4 +1,4 @@
-package cn.com.tanan.boot;
+package cn.com.tanan.boot.Controller;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
  * Handles http requests per URI.
  */
 @RestController
-public class WebController {
+public class HomeController {
 
-  @RequestMapping("/hello")
-  String hello() {
+  @RequestMapping("/")
+  String Home() {
     return "Greetings from Spring Boot!";
   }
 }

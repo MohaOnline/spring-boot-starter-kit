@@ -1,7 +1,7 @@
 /**
  * 需要放在 src/test 目录下
  */
-package cn.com.tanan.boot;
+package cn.com.tanan.boot.Controller;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -18,14 +18,14 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 @SpringBootTest /* 提供完整的 application context */
 @AutoConfigureMockMvc
-public class WebControllerTest {
+public class HomeControllerTest {
 
     @Autowired
     private MockMvc mvc;    /* 模拟 HTTP requests，通过 SpringBootTest、AutoConfigureMockMvc 注入 MockMvc 实例 */
 
     @Test
-    public void getHello() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
+    public void checkHome() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
     }
