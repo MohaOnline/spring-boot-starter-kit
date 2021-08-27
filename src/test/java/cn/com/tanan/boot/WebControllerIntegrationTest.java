@@ -28,9 +28,8 @@ public class WebControllerIntegrationTest {
     }
 
     @Test
-    public void getHello() throws Exception {
-        ResponseEntity<String> response = template.getForEntity(base.toString() + "hello",
-                String.class);
+    public void testHome() throws Exception {
+        ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
         assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
     }
 }
