@@ -1,6 +1,7 @@
 # Spring Boot Starter Kit Guide
-使开发 Spring Boot 应用更容易。
-
+使开发 Spring Boot 应用更容易。  
+运行条件：
+* MySQL 用账号 root:root 跑在 localhost:3306 或 配置 dev property 文件
 ## 相关命令
 
 ```shell script
