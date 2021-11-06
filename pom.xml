@@ -14,7 +14,7 @@
     <!-- 最新版本号 https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/ -->
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.4.2</version>
+    <version>2.5.6</version>
   </parent>
 
   <description/>
@@ -60,9 +60,10 @@
     </dependency>
 
     <dependency> <!-- 自动生成 Getter Setter -->
+      <!-- Latest version: https://mvnrepository.com/artifact/org.projectlombok/lombok -->
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.16</version>
+      <version>1.18.22</version>
       <scope>provided</scope>
     </dependency>
 

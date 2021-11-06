@@ -1,7 +1,11 @@
 # Spring Boot Starter Kit Guide
 使开发 Spring Boot 应用更容易。  
 运行条件：
-* MySQL 用账号 root:root 跑在 localhost:3306 或 配置 dev property 文件
+* MySQL
+  - 通过 jvm 参数，或 spring.profiles.active = dev 使用 dev.properties： -Dspring.profiles.active=dev --add-opens java.base/java.lang=ALL-UNNAMED
+  - 用账号 root:root 跑在 localhost:3306 或 配置 dev property 文件
+  - 有 ssk 数据库：Create Database ssk DEFAULT charset utf8mb4 COLLATE utf8mb4_general_ci;
+
 ## 相关命令
 
 ```shell script
